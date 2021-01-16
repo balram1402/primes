@@ -1,0 +1,220 @@
+{% load static %}
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0">
+    <meta title = "Famous Solapur Towels with wholesale prices at Bulk quantities">
+    <meta name = "keywords" content = "Towels, Online Towels, Hotels, Home and Kitchen Towels, Cotton and Luxuries"
+    <meta description = "Buy Best Quality 100% Cotton Towels in wholesale prices.">
+    <link rel = "stylesheet" href = "{% static 'style.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <script src="https://kit.fontawesome.com/99b73c64c0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    
+</head>
+<body>
+    <nav role="navigation">
+        <div id="menuToggle">
+          <!--
+          A fake / hidden checkbox is used as click reciever,
+          so you can use the :checked selector on it.
+          -->
+          <input type="checkbox" />
+          
+          <!--
+          Some spans to act as a hamburger.
+          
+          They are acting like a real hamburger,
+          not that McDonalds stuff.
+          -->
+          <span></span>
+          <span></span>
+          <span></span>
+          
+          <!--
+          Too bad the menu has to be inside of the button
+          but hey, it's pure CSS magic.
+          -->
+          <ul id="menu">
+            <a href="#" id = "actives"><li>Home</li></a>
+            <a href="{% url 'towel' %}" ><li>Towels</li></a>
+            <a href="{% url 'naps' %}" ><li>Napkins</li></a>
+            <a href="#" ><li>Chaddars</li></a>
+            <a href="{% url 'abt' %}" ><li>About Us</li></a>
+            <a href="{% url 'toc' %}" ><li>T&C</li></a>
+          </ul>
+        </div>
+      </nav>
+<div class = "nav-bar" data-aos="fade-right">
+
+    <h1>Prime Towels</h1>
+  
+<div class = "searchbox">
+    <form action = "{% url 'searchbar' %}"  method = "GET">
+        <input type = "text" name = "search" onchange = "this.form.submit()" placeholder = "Search" id = "search_bar"/>
+        <input type = "submit" id = "submit"/>
+    </form>
+    </div>
+   
+    
+    <center>
+        <div class = "nosearch">
+            {% for message in messages %}
+            {{ message }}
+            {% endfor %}
+        </div>
+    </center>
+
+    <div class="alluls">
+        <ul>
+            <li><a href = "#" id = "actives">Home</a></li>
+            <li><a href = "{% url 'towel' %}">Towels</a></li>
+            <li><a href = "{% url 'naps' %}">Napkins</a></li>
+            <li><a href = "#">Chaddars</a></li>
+            <li><a href = "{% url 'abt' %}">About Us</a></li>
+            <li><a href = "{% url 'toc' %}">T&C</a></li>
+        </ul>
+    </div>
+
+
+    <ul class = "lists1">
+        {% if user.is_authenticated %}
+
+            <li> <a href = "#" class = "current" ><img src = "{% static 'approved.svg' %}" width = "30" height = "30" id = "ic"/>{{ user.username }} </a> </li>
+            <li> <a href = "{% url 'logout' %}" class = "current" ><img src = "{% static 'logout.svg' %}" width = "30" height = "30" id = "ic"/>Logout </a> </li>
+        {% else %}
+            <li> <a href = "{% url 'register' %}" id = "su"><img src = "{% static 'add-user.svg' %}" width = "30" height = "30" id = "ic"/>Sign Up </a> </li>
+            <li> <a href = "{% url 'login' %}" id = "si"><img src = "{% static 'user.svg' %}" width = "30" height = "30" id = "ic"/>Sign In </a> </li>
+        {% endif %}
+
+    </ul>
+</div>
+
+<div id = "slider" data-aos="fade-left">
+    <figure>
+      <img src = "{% static 'img1.jpg' %}">
+      <img src = "{% static 'img2.jpg' %}">
+      <img src = "{% static 'img3.jpg' %}">
+    </figure>
+  </div>
+        <br>
+        
+        
+        
+        
+
+</div>
+
+
+
+
+    
+    
+    
+    
+    
+</center>
+
+<div class = "services1" data-aos="zoom-in" id = "srvc"> 
+    Services
+</div>
+
+<div class = "block" >
+    <div class = "div" data-aos="fade-up-left">
+
+        <h3 class = "h3"> <center>Quality Products<br/></h3>
+            <center>
+                <img src = "{% static 'high-quality.svg' %}" width = "100" height="100"/>
+            </center><br> <br>
+        <center>	<p id = "p"> We help audience to get required quality products at minimum prices. These Products are directly shifted from manufacturers.</p> </center>
+    </div>
+
+    <div class = "div" data-aos="fade-up-right">
+        <h3 class = "h3"><center> In-time Delivery <br/></center> </h3><br>
+        <center>
+            <img src = "{% static 'delivery-truck.svg' %}" width = "100" height="100"/>
+        </center><br>
+        <center><p id = "p"> We arrange your orders in better way and help you recieve your products in time  </p></center>
+    </div>
+
+    <div class = "div" data-aos="fade-up-left">
+        <h3 class = "h3"><center> Market Trends <br/></center></h3><br>
+        <center>
+            <img src = "{% static 'trend.svg' %}" width = "100" height="100"/>
+        </center><br><br>
+        <center> <p id = "p"> We will publish all the market trend towels and help you get them in low prices. </p> </center>
+    </div>
+
+    <div class = "div" data-aos="fade-up-right">
+        <h3 class = "h3"><center>Managing Customer Relationship <br/></center></h3>
+        <center>
+            <img src = "{% static 'crm.svg' %}" width = "100" height="100"/>
+        </center><br><br>
+        <center><p id = "p"> We offer all services by managing customers efficiently. </p> </center>
+    </div>
+    <div class = "div" data-aos="fade-up-left">
+        <h3 class = "h3"><center>Whole-sale Prices <br/></center></h3><br>
+        <center>
+            <img src = "{% static 'low-price.svg' %}" width = "100" height="100"/>
+        </center><br>
+        <center><p id = "p"> Here, we can make sure that the contract which will be bounded is under all the terms of Legal authorities. </p> </center>
+    </div>
+    <div class = "div" data-aos="fade-up-right">
+        <h3 class = "h3"><center>24/7 Support <br/> </center></h3><br>
+        <center>
+            <img src = "{% static '24-hours.svg' %}" width = "100" height="100"/>
+        </center><br>
+        <center><p id = "p"> Agreements may be made by writing or Email processes which indirectly helps in making more Convenient and Soft Deals. </p> </center>
+    </div>
+</div>
+
+
+<h2 class = "abt1">
+    Agent : Shrihari Vitthal Potabatti<br>
+    Profession :Towel Textile Agent (since 1998)<br>
+    Location : Overall Maharashtra<br>
+
+    Dealership : Overall 50+ Manufacturers,<br>
+    & 30+ Retailers<br>
+    Mail : shriharipotabatti67@gmail.com<br>
+    Mobile no. : 9403294757
+
+    <br>
+    <p>Since 1998, our business of providing products and services leads and this is the time we arrived at the face of
+        internet to deal with more people and provide the convenient services to customers.At current stage,our business has borders
+        within Maharashtra,soon this will expand.
+
+
+    </p>
+</h2>
+
+<div class = "lstblock" >
+    <div class = "uli">
+        <ul class = "uls"><br><br><br>
+            <li > <a href = "{% url 'abt' %}">About Us</a> </li><br>
+            <li > <a href = "{% url 'help' %}">Help with your issues!</a> </li><br/>
+            <li > <a href = "{% url 'toc' %}">Terms and Conditions</a> </li><br>
+
+
+        </ul>
+    </div>
+</div>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+
+</body>
+
+
+
+
+
+</html>
+

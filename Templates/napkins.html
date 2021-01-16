@@ -1,0 +1,379 @@
+ {% load static %}
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0">
+    <link rel = "stylesheet" href = "{% static 'style.css' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  
+    <script src="https://kit.fontawesome.com/99b73c64c0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>
+        @media screen and (max-width:1440px){
+            .nav-bar1{
+                display: block;
+                background-color:#555555;
+                width:1440px;
+                height:5.3rem;
+            }
+	        .nav-bar1 .h1ss{
+                color:white;
+                font-size:35px;
+                font-family: 'Alata', sans-serif;
+                margin-top: 20px;
+            }
+            #image{
+                width:200px;
+                height:200px;
+            }
+            .container1{
+                width:20rem;
+                height: 20rem;
+                margin-right: 20px;
+            }
+            .writes{
+                font-size: 26px;
+                line-height: 32px;
+            }
+            .h1ss{
+                font-weight: lighter;
+
+            }
+            .h1ss:hover{
+                font-weight: bolder;
+            }
+            #image{
+                width:200px;
+                height:200px;
+            }
+            .grid-wrapper{
+                grid-template-columns: auto auto auto auto;
+                grid-gap: 4px;
+            }
+            .container1{
+                width:20rem;
+                height: 20rem;
+                margin-right: 20px;
+                margin-top: 1rem;
+            }
+            .container{
+                margin-left:1rem;
+            }
+           
+        }
+        @media screen and (max-width:1366px){
+            .nav-bar1{
+                display: block;
+                background-color:#555555;
+                width:1366px;
+                height:5.3rem;
+            }
+            .writes{
+                font-size: 22px;
+                line-height: 29px;
+            }
+	        .h1ss{
+                margin-top: 20px;
+            }
+            #image{
+                width:200px;
+                height:200px;
+            }
+            .grid-wrapper{
+                grid-template-columns: auto auto auto auto;
+                grid-gap: 4px;
+            }
+            .container1{
+                width:19rem;
+                height: 20rem;
+                margin-right: 20px;
+                margin-top: 1rem;
+            }
+            .container{
+                margin-left:1rem;
+            }
+          
+           
+        }
+        @media screen and (max-width:1024px){
+            .nav-bar1{
+                width:1024px;
+                height:4.6rem;
+            }
+            .container1{
+                height:19rem;
+            }
+            .writes{
+                margin-left: 4px;
+            }
+            .nav-bar1 .h1ss{
+                margin-top: 20px;
+            }
+            .grid-wrapper{
+                grid-template-columns: auto auto auto ;
+                grid-gap: 2px;
+            }
+            .container1{
+                width:18rem;
+                height: 20rem;
+                margin-right: 20px;
+                margin-top: 1rem;
+            }
+            .writes{
+                font-size: 22px;
+                color:black;
+                line-height: 29px;
+            }
+            .container{
+                margin-left:1rem;
+            }
+        }
+        @media screen and (max-width:768px){
+            .nav-bar1{
+                width:768px;
+                height:4rem;
+
+            }
+
+            .writes{
+                font-size: 24px;
+            }
+            .nav-bar1 .h1ss{
+                font-size: 28px;
+                margin-top: 14px;
+                margin-left:30px ;
+            }
+            .grid-wrapper{
+                grid-template-columns: auto auto ;
+                grid-gap: 2px;
+            }
+            .container1{
+                width:18rem;
+                height: 18rem;
+                margin-right: 20px;
+                margin-top: 1rem;
+            }
+            .writes{
+                font-size: 22px;
+                color:black;
+                line-height: 29px;
+            }
+            .container{
+                margin-left:1rem;
+            }
+        }
+        @media screen and (max-width: 425px){
+            .nav-bar1{
+                width:425px;
+            }
+            .container1{
+                width:10.7rem;
+                height:18rem;
+                margin-left: 2px;
+                margin-left: -10px;
+            }
+            .container{
+                margin-left: 1px;
+            }
+            .grid-wrapper{
+                margin-left: 0.4rem;
+            }
+            .h1ss{
+                font-size:8px ;
+            }
+            .writes{
+                margin-left: 2px;
+                font-size: 22px;
+            }
+            #image{
+                width:110px;
+                height:110px;
+            }
+        }
+        @media screen and (max-width:375px){
+            .nav-bar1{
+                width:375px;
+            }
+            .container1{
+                width:10rem;
+                height:15rem;
+                margin-left: 10px;
+                margin-left:-16px;
+            }
+              
+           .grid-wrapper{
+               margin-left: 2rem;
+               
+           }
+            .writes{
+                line-height: 26px;
+                font-size: 20px;
+            }
+            .sp{
+                font-size: 20px;
+            }
+            .nav-bar1 .h1ss{
+                font-size: 28px;
+                margin-top: 15px;
+                margin-left: 20px;
+            }
+        }
+        @media screen and (max-width:320px){
+            .nav-bar{
+                width:320px;
+            }
+            .container{
+                margin-left: -5rem;
+            }
+            .grid-wrapper{
+                margin-left: 12rem;
+            }
+            .container1{
+                width:8rem;
+                height:14rem;
+                margin-left: -18px;
+            }
+            .writes{
+                font-size: 16px;
+                line-height: 20px;
+                margin-right: -13px;
+            }
+            .sp{
+                font-size: 16px;
+            }
+            .uls{
+                margin-left:1rem;
+            }
+            .uls li a{
+                font-size:12px;
+            }
+           
+        }
+
+    </style>
+    
+</head>
+<body>
+    <div class = "nav-bar">
+        <nav role="navigation">
+            <div id="menuToggle">
+              <!--
+              A fake / hidden checkbox is used as click reciever,
+              so you can use the :checked selector on it.
+              -->
+              <input type="checkbox" />
+              
+              <!--
+              Some spans to act as a hamburger.
+              
+              They are acting like a real hamburger,
+              not that McDonalds stuff.
+              -->
+              <span></span>
+              <span></span>
+              <span></span>
+              
+              <!--
+              Too bad the menu has to be inside of the button
+              but hey, it's pure CSS magic.
+              -->
+              <ul id="menu">
+                <a href="{% url 'index' %}" id = "actives"><li>Home</li></a>
+                <a href="{% url 'towel' %}" ><li>Towels</li></a>
+                <a href="{% url 'naps' %}" ><li>Napkins</li></a>
+                <a href="#" ><li>Chaddars</li></a>
+                <a href="{% url 'abt' %}" ><li>About Us</li></a>
+                <a href="{% url 'toc' %}" ><li>T&C</li></a>
+              </ul>
+            </div>
+          </nav>
+        <a href = "{% url 'redirect' %}">
+            <h1> Towels Online</h1>
+        </a>
+        <div class = "searchbox">
+            <form action = "{% url 'searchbar' %}"  method = "GET">
+                <input type = "text" name = "search" onchange = "this.form.submit()" placeholder = "Search" id = "search_bar"/>
+                <input type = "submit" id = "submit"/>
+            </form>
+            </div>
+        <div class="alluls">
+            <ul>
+                <li><a href = "{% url 'index' %}">Home</a></li>
+                <li><a href = "{% url 'towel' %}">Towels</a></li>
+                <li><a href = "#"  id = "actives">Napkins</a></li>
+                <li><a href = "">Chaddars</a></li>
+                <li><a href = "{% url 'abt' %}">About Us</a></li>
+                <li><a href = "{% url 'toc' %}">T&C</a></li>
+            </ul>
+        </div>
+        <ul class = "lists1">
+            {% if user.is_authenticated %}
+    
+                <li> <a href = "#" class = "current" ><img src = "{% static 'approved.svg' %}" width = "30" height = "30"/>{{ user.username }} </a> </li>
+                <li> <a href = "{% url 'logout' %}" class = "current" ><img src = "{% static 'logout.svg' %}" width = "30" height = "30"/>Logout </a> </li>
+            {% else %}
+                <li> <a href = "{% url 'register' %}" id = "su"><img src = "{% static 'add-user.svg' %}" width = "30" height = "30"/>Sign Up </a> </li>
+                <li> <a href = "{% url 'login' %}" id = "si"><img src = "{% static 'user.svg' %}" width = "30" height = "30"/>Sign In </a> </li>
+            {% endif %}
+    
+        </ul>
+    
+    </div>
+
+
+
+    <div class = "container">
+    <div class = "grid-wrapper">
+
+            {% for objn in objn %}
+
+            <a href = "{% url 'dnaps' objn.id %}">
+
+        <div class = "container1" data-aos="fade-up"
+        data-aos-duration="1000" >
+
+
+            <center> <img src = "{{ objn.Imagen.url }}" id = "image"></center>
+            <div class = "writes">
+                Name :    {{ objn.Nname }}<br>
+                <div>
+                                            <span class = "sp">
+                                                {% if objn.Stockn %} In Stock </span>
+                                                {% else %}<span class = "rd"> Out of Stock
+                                                {% endif %}
+                                                </span>
+                </div>
+
+            </div></div>
+        </a></a>
+    {% endfor %}
+
+    </div>
+
+</div>
+
+<div class = "lstblock">
+    <div class = "uli">
+        <ul class = "uls"><br><br><br>
+            <li > <a href = "{% url 'abt' %}">About Us</a> </li><br>
+            <li > <a href = "{% url 'help' %}">Help with your issues!</a> </li><br/>
+            <li > <a href = "{% url 'toc' %}">Terms and Conditions</a> </li><br>
+
+
+        </ul>
+    </div>
+</div>
+    
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+
+
+
+</body>
+
+</html>

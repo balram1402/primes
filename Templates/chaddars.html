@@ -1,0 +1,221 @@
+{% load static %}
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0">
+    <link rel = "stylesheet" href = "{% static 'style.css' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+
+    <style>
+        @media screen and (max-width:1440px){
+            .nav-bar1{
+                display: block;
+                background-color:#555555;
+                width:1440px;
+                height:5.3rem;
+            }
+            .nav-bar1 h1{
+                color:white;
+                font-family: 'Alata', sans-serif;
+            }
+            #image{
+                width:200px;
+                height:200px;
+            }
+            .h1s{
+                font-weight: lighter;
+                font-size: 36px;
+            }
+            .h1s:hover{
+                font-weight: bolder;
+            }
+        }
+        @media screen and (max-width:1366px){
+            .nav-bar1{
+                display: block;
+                background-color:#555555;
+                width:1366px;
+                height:5.3rem;
+            }
+            .nav-bar1 h1{
+                color:white;
+                font-size:32px;
+                font-family: 'Alata', sans-serif;
+            }
+            .container{
+                margin-left: 0.2rem;
+            }
+        }
+        @media screen and (max-width:1024px){
+            .nav-bar1{
+                width:1024px;
+                height:4.6rem;
+            }
+            .h1s{
+                font-size: 24px;
+                margin-top: 14px;
+            }
+            .container1{
+                margin: auto;
+                width:17.8rem;
+                height:22rem;
+            }
+        }
+        @media screen and (max-width:768px){
+            .nav-bar1{
+                width:768px;
+                height:3.5rem;
+
+            }
+            .nav-bar1 .h1s{
+                font-size: 21px;
+            }
+            .h1s{
+                margin-left: 18px;
+
+            }
+
+        }
+        @media screen and (max-width: 425px){
+            .nav-bar1{
+                width:425px;
+            }
+            .nav-bar1 .h1s{
+                font-size: 23px;
+                margin-left: 20px;
+            }
+            .container1{
+                width:10.7rem;
+                height:18rem;
+            }
+            .writes{
+                margin-left: 2px;
+                font-size: 18px;
+            }
+            #image{
+                width:110px;
+                height:110px;
+            }
+        }
+        @media screen and (max-width:375px){
+            .nav-bar1{
+                width:375px;
+            }
+            .container1{
+                width:9.7rem;
+                height:17.5rem;
+            }
+            .writes{
+                line-height: 24px;
+            }
+        }
+        @media screen and (max-width:320px){
+            .nav-bar1{
+                width:320px;
+            }
+            .nav-bar1 .h1s{
+                font-size: 22px;
+            }
+
+            .container1{
+                width:7.9rem;
+                height:15.4rem;
+            }
+            .writes{
+                font-size: 16px;
+                line-height: 20px;
+                margin-right: -13px;
+            }
+            .sp{
+                font-size: 17px;
+            }
+        }
+    </style>
+</head>
+<body id = "bodyp">
+    <nav role="navigation">
+        <div id="menuToggle">
+          <!--
+          A fake / hidden checkbox is used as click reciever,
+          so you can use the :checked selector on it.
+          -->
+          <input type="checkbox" />
+          
+          <!--
+          Some spans to act as a hamburger.
+          
+          They are acting like a real hamburger,
+          not that McDonalds stuff.
+          -->
+          <span></span>
+          <span></span>
+          <span></span>
+          
+          <!--
+          Too bad the menu has to be inside of the button
+          but hey, it's pure CSS magic.
+          -->
+          <ul id="menu">
+            <a href="{% url 'index' %}" id = "actives"><li>Home</li></a>
+            <a href="{% url 'towel' %}" ><li>Towels</li></a>
+            <a href="{% url 'naps' %}" ><li>Napkins</li></a>
+            <a href="#" ><li>Chaddars</li></a>
+            <a href="{% url 'abt' %}" ><li>About Us</li></a>
+            <a href="{% url 'toc' %}" ><li>T&C</li></a>
+          </ul>
+        </div>
+      </nav>
+
+<div class = "nav-bar">
+    <a href = "{% url 'redirect' %}">
+        <h1> Towels Online</h1>
+    </a>
+    <div class = "searchbox">
+        <form action = "{% url 'searchbar' %}"  method = "GET">
+            <input type = "text" name = "search" onchange = "this.form.submit()" placeholder = "Search" id = "search_bar"/>
+            <input type = "submit" id = "submit"/>
+        </form>
+        </div>
+    <div class="alluls">
+        <ul>
+            <li><a href = "{% url 'index' %}">Home</a></li>
+            <li><a href = "#"  id = "actives">Towels</a></li>
+            <li><a href = "{% url 'naps' %}">Napkins</a></li>
+            <li><a href = "">Chaddars</a></li>
+            <li><a href = "{% url 'abt' %}">About Us</a></li>
+            <li><a href = "{% url 'toc' %}">T&C</a></li>
+        </ul>
+    </div>
+    <ul class = "lists1">
+        {% if user.is_authenticated %}
+
+            <li> <a href = "#" class = "current" > Hello, {{ user.username }} </a> </li>
+            <li> <a href = "{% url 'logout' %}" class = "current" > Logout </a> </li>
+        {% else %}
+            <li> <a href = "{% url 'register' %}" id = "su"> Sign Up </a> </li>
+            <li> <a href = "{% url 'login' %}" id = "si"> Sign In </a> </li>
+        {% endif %}
+
+    </ul>
+
+</div>
+
+<center>
+    <h2>
+        Chaddars are yet to add!
+        </h2>
+</center>
+
+
+
+
+
+</body>
+</html>
+
+
+    
+    

@@ -1,0 +1,271 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Help with your issues!</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+
+    <link rel = "stylesheet" href = "{% static 'style.css' %}">
+    <style>
+        @media screen and (max-width:1440px) {
+            *{
+                margin:0;
+                padding: 0;
+            }
+            .body {
+                background-color: ghostwhite;
+            }
+
+            .nav-bar h1 {
+                font-size: 30px;
+                font-weight: lighter;
+                font-family: 'Alata', sans-serif;
+                margin-top: 20px;
+            }
+
+            .nav-bar {
+                width: 1440px;
+                height: 4.6rem;
+                top:1px;
+            }
+            .tophead{
+                font-family: 'Josefin Sans', sans-serif;
+                font-size: 28px;
+                margin-top: 2rem;
+                color: #705b2e;
+
+            }
+             #paragraph{
+                font-size:19px;
+                font-family: 'Josefin Sans', sans-serif;
+                margin:3rem;
+                line-height: 2rem;
+                letter-spacing: 1px;
+
+            }
+             .daata{
+                 font-size: 20px;
+                 font-family: 'Josefin Sans', sans-serif;
+                 color:#705b2e;
+                 font-weight: lighter   ;
+             }
+        }
+        @media screen and (max-width:1366px){
+            .nav-bar{
+                width:1366px;
+                height:7rem;
+            }
+            .tophead{
+                font-family: 'Josefin Sans', sans-serif;
+                font-size: 28px;
+                margin-top: 4rem;
+                font-weight: lighter;
+
+            }
+            #paragraph{
+                font-size:16px;
+                font-family: 'Josefin Sans', sans-serif;
+                margin:3rem;
+                line-height: 2rem;
+                letter-spacing: 1px;
+
+            }
+        }
+        @media screen and (max-width:1024px){
+            .nav-bar{
+                width:1024px;
+            }
+            .nav-bar h1{
+                margin-top: 23px;
+                font-family: 'Alata', sans-serif;
+            }
+            
+        }
+        @media screen and (max-width:768px){
+            .nav-bar{
+                width:768px;
+            }
+            .nav-bar h1{
+                font-size:24px ;
+                font-weight: lighter;
+            }
+            .nav-bar h1:hover{
+                font-weight: bolder;
+            }
+            #paragraph{
+                margin-left: 1rem;
+                margin-right: 1rem;
+                font-size: 15px;
+            }
+        }
+        @media screen and (max-width:425px){
+            .nav-bar{
+                width:425px;
+            }
+            .nav-bar h1{
+                margin-top: 14px;
+                margin-left: 1rem;
+                font-size: 26px;
+            }
+            #paragraph{
+                margin-left: 1rem;
+                margin-right: 1rem;
+            }
+        }
+        @media screen and (max-width:375px){
+            .nav-bar{
+                width:375px;
+            }
+            #paragraph{
+                margin-left: 1rem;
+                margin-right: 1rem;
+                font-size: 16px;
+            }
+            .tophead{
+                font-size: 20px;
+                margin-top: 2rem;
+            }
+        }
+        @media screen and (max-width:320px){
+            .nav-bar{
+                width:320px;
+            }
+            .nav-bar h1{
+                letter-spacing: 1px;
+            }
+            #paragraph{
+                margin-left: 1rem;
+                margin-right: 1rem;
+                font-size: 16px;
+            }
+
+
+
+        }
+        .nav-bar{
+            width:100%;
+        }
+        *{
+            font-weight: lighter;
+        }
+    </style>
+</head>
+<body>
+    <nav role="navigation">
+        <div id="menuToggle">
+          <!--
+          A fake / hidden checkbox is used as click reciever,
+          so you can use the :checked selector on it.
+          -->
+          <input type="checkbox" />
+          
+          <!--
+          Some spans to act as a hamburger.
+          
+          They are acting like a real hamburger,
+          not that McDonalds stuff.
+          -->
+          <span></span>
+          <span></span>
+          <span></span>
+          
+          <!--
+          Too bad the menu has to be inside of the button
+          but hey, it's pure CSS magic.
+          -->
+          <ul id="menu">
+            <a href="{% url 'index' %}" id = "actives"><li>Home</li></a>
+            <a href="{% url 'towel' %}" ><li>Towels</li></a>
+            <a href="{% url 'naps' %}" ><li>Napkins</li></a>
+            <a href="#" ><li>Chaddars</li></a>
+            <a href="{% url 'abt' %}" ><li>About Us</li></a>
+            <a href="{% url 'toc' %}" ><li>T&C</li></a>
+          </ul>
+        </div>
+      </nav>
+    
+<div class = "nav-bar">
+    <a href = "{% url 'redirect' %}">
+        <h1> Towels Online</h1>
+    </a>
+    <div class = "searchbox">
+        <form action = "{% url 'searchbar' %}"  method = "GET">
+            <input type = "text" name = "search" onchange = "this.form.submit()" placeholder = "Search" id = "search_bar"/>
+            <input type = "submit" id = "submit"/>
+        </form>
+        </div>
+    <div class="alluls">
+        <ul>
+            <li><a href = "{% url 'index' %}">Home</a></li>
+            <li><a href = "{% url 'towel' %}">Towels</a></li>
+            <li><a href = "{% url 'naps' %}">Napkins</a></li>
+            <li><a href = "">Chaddars</a></li>
+            <li><a href = "{% url 'abt' %}">About Us</a></li>
+            <li><a href = "{% url 'toc' %}">T&C</a></li>
+        </ul>
+    </div>
+    <ul class = "lists1">
+        {% if user.is_authenticated %}
+
+            <li> <a href = "#" class = "current" ><img src = "{% static 'approved.svg' %}" width = "30" height = "30"/>{{ user.username }} </a> </li>
+            <li> <a href = "{% url 'logout' %}" class = "current" ><img src = "{% static 'logout.svg' %}" width = "30" height = "30"/>Logout </a> </li>
+        {% else %}
+            <li> <a href = "{% url 'register' %}" id = "su"><img src = "{% static 'add-user.svg' %}" width = "30" height = "30"/>Sign Up </a> </li>
+            <li> <a href = "{% url 'login' %}" id = "si"><img src = "{% static 'user.svg' %}" width = "30" height = "30"/>Sign In </a> </li>
+        {% endif %}
+
+    </ul>
+
+</div>
+
+<center><h2 class = "tophead">Help with Your Issues</h2></center>
+<p id = "paragraph">
+    <span class = "daata"> You may have following issues:</span><br>
+    <span class = "daata"> Account Data: </span><br>
+    1) First and foremost, let us make clear that your data is way safe and secured with us. We use your data only for the purpose to get in touch with you, communicate with you, specifically related to speak up with all the details and terms about our business and how we service you. To be specific we make Agreements which can be closely generated using Paper work or Emails, because this type of agreements are convenient and suitable for both parties.
+
+
+    <br>
+    <span class = "daata">Before placing order :</span><br>
+    1. You may have issue regarding the Quality of product, Trust on us and Ethical processes to carry on Agreements as its obvious, let we make clear about those terms -
+    <br>
+    <span class = "daata"> Quality of Product : </span>As we deal with good manufacturing companies we can make sure that you get quality products as seen in the Image.<br>
+    Trust on us : With the issue of this, you can frankly communicate with us, get details of contact info in the following page.And let me make sure that our business plans are too high and we are sure that we provide every customer with possible less interrupted services like order, delivery, payments , etc.
+    <br>
+    <span class = "daata"> Ethical Process to carry on Agreements :</span><br>
+    Agreement is term which have to be cleared in every sense. Please make sure that you have read all the instructions carefully:
+    <br>
+    1) Agreement is something which includes understanding and acceptance of legal rights and duties as to particular actions or obligations, which the parties intend to exchange. Mutual assents are taken place using the acceptance of both the parties which is done using mails and verbal communications.<br>
+    2) Lawful Consideration Process work as well organized which only uses Hard Copy Cheques or (Soft/Hard Cash) which benefits for both parties to make the particular payments much secured and which also leads in good contract according to Lawfulness.
+    <br><br>
+    <span class = "daata"> After Placing Order :</span><br/>
+    <br>
+    1) We try to get in touch with you as soon as possible and confirm the address of delivery.<br>
+    <br>
+    2) We would contact you soon if the order done by you has any issues while processing in Manufacturing, Delivery or Sales.
+
+    <br>
+    3) Full payment is only accepted when you receive the quantity of products you accepted in the Agreement. There must be any proof or document that you have Paid us or else it will be considered as Not-Paid.
+    <br/><span class = "daata"> Thank You!</span>
+
+</p>
+
+
+<div class = "lstblock" >
+    <div class = "uli">
+        <ul class = "uls"><br><br><br>
+            <li > <a href = "{% url 'abt' %}">About Us</a> </li><br>
+            <li > <a href = "{% url 'help' %}">Help with your issues!</a> </li><br/>
+            <li > <a href = "{% url 'toc' %}">Terms and Conditions</a> </li><br>
+
+
+        </ul>
+    </div>
+</div>
+
+</body>
+</html>

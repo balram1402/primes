@@ -1,0 +1,385 @@
+{% load static %}
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0">
+    <link rel = "stylesheet" href = "{% static 'style.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <style>
+        @media screen and (max-width:1440px) {
+            .nav-bar11 {
+                width: 1440px;
+                background-color:darkslategray ;
+                opacity: 0.4;
+                height: 5rem;
+            }
+
+            #reg {
+                margin-top: 2rem;
+            }
+
+            .whole{
+                margin: auto;
+                width: 18rem;
+                padding: 10px;
+                margin-top: 4rem;
+                height: 14rem;
+                border-radius: 6px;
+                border: 0.1px solid grey;
+            }
+
+
+
+            .message {
+                color: red;
+                font-family: 'Alata', sans-serif;
+                font-size: 16px;
+                font-weight: lighter;
+                margin-top: 6px;
+
+            }
+
+
+            .body {
+                background-color: floralwhite;
+            }
+
+            .whole {
+                margin: auto;
+                width: 18rem;
+                padding: 10px;
+                margin-top: 4rem;
+                height: 18rem;
+                border-radius: 6px;
+                border: 0.1px solid grey;
+            }
+
+            .reg {
+                font-size: 28px;
+                padding: 10px;
+                color: grey;
+                border-radius: 10px;
+                color: #705b2e;
+                margin-bottom: 2rem;
+                border: 0.4px solid grey;
+                width: 6rem;
+                margin-top: 1rem;
+            }
+
+            .reg:hover {
+                transition: 0.6s;
+                border-color: black;
+            }
+
+            .headings {
+                margin-top: 2rem;
+                font-size: 15px;
+                letter-spacing: 1px;
+                margin-right: 3rem;
+
+            }
+            #inp{
+                border: 1px solid grey;
+            }
+
+            #inp:hover{
+                border: 1px solid black;
+                transition:0.4s;
+                color:black;
+            }
+            #inp::placeholder {
+                text-align: center;
+            }
+
+            #inp:focus {
+                outline: none;
+            }
+
+            #sub {
+                border: 0.4px solid grey;
+                font-size: 20px;
+                padding: 10px;
+                width: 10rem;
+                height: 3rem;
+                background-color: lightblue;
+                margin-top: 2rem;
+                color:white;
+                border-radius: 20px;
+                font-family: 'Alata', sans-serif;
+                background-color: dodgerblue;
+                margin-right: 4rem;
+                
+            }
+            #sub:hover{
+                border-color: white;
+                
+            }
+
+
+            .a2 h4 {
+                margin-top: 1rem;
+                margin-left: 1rem;
+                color: black;
+                font-family: 'Alata', Sans-Serif;
+                letter-spacing: 0.3px;
+                line-height: 14px;
+            }
+
+            #sub:focus {
+                outline: none;
+            }
+
+            .h1s {
+                margin-top: 20px;
+                cursor: pointer;
+                font-weight: lighter;
+                color:white;
+            }
+            .h1s:hover{
+                font-weight: bolder;
+            }
+
+            .message {
+                cursor: pointer;
+            }
+
+            .ulss li {
+                font-size: 24px;
+                float: right;
+                list-style: none;
+                margin: 26px;
+                margin-right: 3rem;
+
+            }
+
+            .ulss li a {
+                color: white;
+                font-family: 'Alata', Sans-Serif;
+                font-weight: lighter;
+                letter-spacing: 1px;
+            }
+
+            .ulss li a:hover {
+                font-weight: bolder;
+            }
+        }
+        @media screen and (max-width:1366px){
+            .nav-bar11{
+                width:1366px;
+                height:5rem;
+            }
+        }
+        @media screen and (max-width:1024px){
+            .nav-bar11{
+                width: 1024px;
+                height:5rem;
+            }
+        }
+        @media screen and (max-width:768px){
+            .nav-bar11{
+                width: 768px;
+                height:4.1rem;
+            }
+            .h1s{
+                margin-top: 10px;
+                font-size: 28px;
+                margin-left: 10px;
+            }
+            .ulss li,.ulss li a{
+                margin-top: 15px;
+                letter-spacing: -1px;
+            }
+            #reg{
+                margin-top:1rem ;
+            }
+            .whole{
+                margin-top: 1rem;
+                height: 23rem;
+            }
+        }
+        @media screen and (max-width:425px){
+            .nav-bar11{
+                width: 425px;
+                height:4rem;
+            }
+            .ulss li{
+                margin-right: 1rem;
+            }
+            .whole{
+                height: 18rem;
+                width:16rem ;
+            }
+            .headings{
+                margin-left: -1rem;
+            }
+        }
+        @media screen and (max-width:375px){
+            .nav-bar11{
+                width:375px;
+                height:3.8rem;
+            }
+            .h1s{
+                margin-top: 14px;
+
+            }
+            .ulss li a{
+                font-size: 20px;
+                letter-spacing: 1px;
+
+            }
+            .ulss li{
+                margin-top: 24px;
+            }
+        }
+        @media screen and (max-width:320px){
+            .nav-bar11{
+                width:320px;
+                height:3.8rem;
+            }
+            .whole{
+                width:14rem;
+                height:16rem;
+            }
+
+            .headings{
+                margin-top: 0.8rem;
+                margin-left: -1.6rem;
+            }
+            #sub{
+                margin-left: 4.2rem;
+            }
+
+        }
+
+    </style>
+    <script>
+        function smallcase(){
+            var x = document.getElementById("inp");
+            x.value = x.value.toLowerCase();
+        }
+        function validateForm() {
+            var x = document.forms["form1"]["username"].value;
+            var pass1 = document.forms["form1"]["password1"].value;
+            if (x == "") {
+                alert("Username cannot be Blank");
+                return false;
+            }
+            if (y == "") {
+                alert("Enter Email field");
+                return false;
+            }
+            if (x == "" && y == "") {
+                alert("Enter Credentials!");
+                return false;
+            }
+            else{
+                return true;
+            }
+        }
+        function vanish(){
+            document.getElementById("message").style.visibility = "hidden";
+        }
+    </script>
+</head>
+<body  class = "body">
+    <nav role="navigation">
+        <div id="menuToggle">
+          <!--
+          A fake / hidden checkbox is used as click reciever,
+          so you can use the :checked selector on it.
+          -->
+          <input type="checkbox" />
+          
+          <!--
+          Some spans to act as a hamburger.
+          
+          They are acting like a real hamburger,
+          not that McDonalds stuff.
+          -->
+          <span></span>
+          <span></span>
+          <span></span>
+          
+          <!--
+          Too bad the menu has to be inside of the button
+          but hey, it's pure CSS magic.
+          -->
+          <ul id="menu">
+            <a href="{% url 'index' %}" id = "actives"><li>Home</li></a>
+            <a href="{% url 'towel' %}" ><li>Towels</li></a>
+            <a href="{% url 'naps' %}" ><li>Napkins</li></a>
+            <a href="#" ><li>Chaddars</li></a>
+            <a href="{% url 'abt' %}" ><li>About Us</li></a>
+            <a href="{% url 'toc' %}" ><li>T&C</li></a>
+          </ul>
+        </div>
+      </nav>
+    <div class = "nav-bar">
+        <a href = "{% url 'redirect' %}">
+            <h1> Towels Online</h1>
+        </a>
+        <div class = "searchbox">
+            <form action = "{% url 'searchbar' %}"  method = "GET">
+                <input type = "text" name = "search" onchange = "this.form.submit()" placeholder = "Search" id = "search_bar"/>
+                <input type = "submit" id = "submit"/>
+            </form>
+            </div>
+        <div class="alluls">
+            <ul>
+                <li><a href = "{% url 'index' %}">Home</a></li>
+                <li><a href = "{% url 'towel' %}">Towels</a></li>
+                <li><a href = "{% url 'naps' %}">Napkins</a></li>
+                <li><a href = "">Chaddars</a></li>
+                <li><a href = "{% url 'abt' %}">About Us</a></li>
+                <li><a href = "{% url 'toc' %}">T&C</a></li>
+            </ul>
+        </div>
+        <ul class = "lists1">
+            {% if user.is_authenticated %}
+    
+                <li> <a href = "#" class = "current" ><img src = "{% static 'approved.svg' %}" width = "30" height = "30"/>{{ user.username }} </a> </li>
+                <li> <a href = "{% url 'logout' %}" class = "current" ><img src = "{% static 'logout.svg' %}" width = "30" height = "30"/>Logout </a> </li>
+            {% else %}
+                <li> <a href = "{% url 'register' %}" id = "su"><img src = "{% static 'add-user.svg' %}" width = "30" height = "30"/>Sign Up </a> </li>
+                <li> <a href = "#" id = "si"><img src = "{% static 'user.svg' %}" width = "30" height = "30"/>Sign In </a> </li>
+            {% endif %}
+    
+        </ul>
+    
+    </div>
+    
+<br><br>
+<center>
+    <div class = "reg" id = "reg" data-aos="fade-up"><center>Sign In</center></div>
+</center>
+<div class = "whole" data-aos="zoom-out">
+    <div class = "headings"  id = "headings"><center>
+        <form action = "{% url 'login' %}" method = "post" onsubmit="return validateForm()">
+            {% csrf_token %}
+
+            <input type = "text" id = "inp" placeholder = "Username" name = "username" onblur = "smallcase()"><br>
+            <input type = "password" id = "inp" placeholder = "Confirm Password" name = "password1"><br>
+
+            <button type = "submit" id = "sub">Submit</button>
+            
+
+        </form>
+    </center>
+        <div class = "message" onload = "vanish()">
+            {% for mess in messages %}
+                {{ mess }}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+</body>
+</html>

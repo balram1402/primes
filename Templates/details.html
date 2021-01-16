@@ -1,0 +1,1335 @@
+{% load static %}
+<!doctype html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0">
+    <link rel = "stylesheet" href = "{% static 'style.css' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&family=Open+Sans&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <style>
+        @media screen and (max-width:1440px) {
+            .nav-bar1 {
+                background-color: #555555;
+                width: 1440px;
+                height: 5.4rem;
+
+            }
+            
+            .nav-bar1 h1{
+                margin-top: 20px;
+                font-size: 36px;
+                font-family: 'Alata', sans-serif;
+                letter-spacing: 1px;
+                font-weight: lighter;
+            }
+            .nav-bar1 h1:hover{
+                font-weight: bolder;
+            }
+
+
+            #fn, #fn1, #fn2, #fn3, #fn4, #fn5, #fn6, #fn7, #fn9, #fn8, #fn9 {
+                margin-left: 1rem;
+                padding: 6px;
+                width: 5rem;
+                border-radius: 15px;
+                font-weight: bold;
+                margin-top: 1rem;
+                background-color: white;
+                font-family: 'Nunito', sans-serif;
+            }
+
+            input:focus {
+                outline: none;
+            }
+
+            button:focus {
+                outline: none;
+            }
+
+            button.active {
+                border-bottom-color: black;
+            }
+
+            #fn {
+                border: 0.1px solid darkslategrey;
+                color: orange;
+                transition: 0.2s;
+            }
+          
+            #fn:hover {
+                border: 0.1px solid grey;
+                background-color: orange;
+                color: white;
+                transition: 0.4s;
+            }
+          
+            
+
+            #fn1 {
+                border: 0.1px solid darkslategrey;
+                border-width: 0.4px;
+                color: red;
+                transition: 0.2s;
+
+            }
+
+            #fn1:hover {
+                color: white;
+                background-color: red;
+                border-color: white;
+                transition: 0.5s;
+                transition: 0.4s;
+            }
+
+            #fn2 {
+                border: 0.1px solid darkslategrey;
+                border-width: 0.4px;
+
+                color: blue;
+                transition: 0.2s;
+            }
+
+            #fn2:hover {
+                background-color: blue;
+                border-color: white;
+                color: white;
+                transition: 0.4s;
+            }
+
+            #fn3 {
+                border: 1px solid darkslategrey;
+                border-width: 0.4px;
+                color: yellow;
+                transition: 0.2s;
+            }
+
+            #fn3:hover {
+                background-color: yellow;
+                border-color: white;
+                color: white;
+                transition: 0.4s;
+            }
+
+            #fn4 {
+                border: 1px solid darkslategrey;
+                border-width: 0.4px;
+                color: deeppink;
+                transition: 0.2s;
+            }
+
+            #fn4:hover {
+                border: 1px solid deeppink;
+                background-color: deeppink;
+                color: white;
+                transition: 0.4s;
+            }
+
+            #fn5 {
+                border: 1px solid darkslategrey;
+                border-width: 0.4px;
+                color: purple;
+                transition: 0.2s;
+            }
+
+            #fn5:hover {
+                background-color: purple;
+                border-color: white;
+                color: white;
+                transition: 0.4s;
+            }
+
+            #fn6 {
+                border: 1px solid darkslategrey;
+                border-width: 0.4px;
+                color: brown;
+                transition: 0.2s;
+            }
+
+            #fn6:hover {
+                background-color: brown;
+                border-color: white;
+                color: white;
+                transition: 0.4s;
+            }
+
+            #fn7 {
+                border: 1px solid darkslategrey;
+                border-width: 0.4px;
+                color: green;
+                transition: 0.2s;
+            }
+
+            #fn7:hover {
+                background-color: green;
+                border-color: white;
+                color: white;
+                transition: 0.4s;
+            }
+
+            #fn10 {
+                border: 1px solid darkslategrey;
+                border-width: 0.4px;
+                text-decoration-color: grey;
+                transition: 0.2s;
+                width:7rem;
+                height: 1rem;
+                background-color: white;
+                font-family: 'Nunito', sans-serif;
+                font-weight: bolder;
+            }
+
+            #fn10:hover {
+                background-color: grey;
+                border-color: white;
+                color: white;
+                transition: 0.4s;
+            }
+
+            #fn9 {
+                border: 1px solid darkslategrey;
+                border-width: 0.4px;
+                color: #98ff98;
+                transition: 0.2s;
+            }
+
+            #fn9:hover {
+                background-color: #98ff98;
+                border-color: white;
+                color: white;
+                transition: 0.4s;
+            }
+
+
+            #imgs {
+                width: 40px;
+                height: 40px;
+                padding: 6px;
+            }
+
+            #img1 {
+                width:360px;
+                margin-left: 5rem;
+                margin-top: 3.4rem;
+            }
+
+            #img1 actives {
+                transform: scale(1.3);
+                transition: 0.8s;
+            }
+
+            .a1, .a2 {
+                margin-top: 2rem;
+            }
+            .a1{
+                background-color: #f6f3ee;
+                width:30rem;
+                height: 30rem;
+            }
+
+            .block1 {
+                display: grid;
+                grid-template-columns: auto auto;
+                margin-top: 2rem;
+                margin-left: 4rem;
+            }
+
+            .block1 .div1 {
+                margin: 10px;
+            }
+
+            .div1 {
+                padding: 30px;
+                width: 30rem;
+                height: 10rem;
+                border: 0.4px solid transparent;
+                margin-top: 10rem;
+            }
+            .div1:hover{
+                transition: 0.6s;
+                border: 0.4px solid white;
+                background-color:rgba(0,0,0,.06);
+            }
+
+            .h3 {
+                font-size: 30px;
+                margin-top: -1rem;
+                color: #705b2e;
+                letter-spacing: 1px;
+                font-family: 'Josefin Sans', sans-serif;
+            }
+
+            .h2s {
+                font-size: 25px;
+                color: #705b2e;
+                left:40%;
+            }
+            .span{
+                font-size:18px;
+                font-weight: bold;
+            }
+            #p {
+                color: #705b2e;
+                letter-spacing: 1px;
+                font-family: 'Alata', sans-serif;
+                margin-top: 1rem;
+                font-weight: lighter;
+                font-size: 16px;
+            }
+
+            .fas, .far, .fab {
+                margin-top: 8px;
+                color: grey;
+                font-size: 20px;
+                width: 20px;
+                height: 20px;
+            }
+
+            .div1:hover .fas:hover {
+                color: grey;
+            }
+
+            .allblocks {
+                vertical-align: middle;
+                position: fixed;
+            }
+
+            .imggrids, .imggrids1, .imggrids2, .imggrids3, .imggrids4, .imggrids5, .imggrids6, .imggrids7, .imggrids8, .imggrids9 {
+                width: 50px;
+                height: 50px;
+                border: 1px solid grey;
+                margin: 16px;
+                border-radius: 4px;
+                padding: 1px;
+            }
+
+            .imggrids:hover, .imggrids1:hover, .imggrids2:hover, .imggrids3:hover, .imggrids4:hover, .imggrids5:hover, .imggrids6:hover, .imggrids7:hover, .imggrids8:hover, .imggrids9:hover {
+                padding: 3px;
+                border-color: antiquewhite;
+                transition: 0.3s;
+                box-shadow: 2px 2px 5px;
+
+            }
+
+            .a2 {
+                padding-left: 20px;
+                border-color: transparent;
+                border-radius: 2px;
+                font-family: 'Nunito', sans-serif;
+                letter-spacing: 1px;
+
+            }
+
+
+
+            #fn10 {
+                width: 6rem;
+                height: 60px;
+            }
+
+            .int {
+                padding: 8px;
+                font-size: 16px;
+                border-radius: 20px;
+                font-family: 'Alata', sans-serif;
+                border-color: transparent;
+                background-color: greenyellow;
+                color: #705b2e;
+                cursor: pointer;
+                margin: 10px;
+
+
+            }
+
+            .int:focus {
+                outline: none;
+            }
+            #displays,#emaildisplays{
+                display: none;
+                z-index: 10;
+                position: absolute;
+                border: 1px solid #705b2e;
+                border-radius: 8px;
+                margin-left: -35rem;
+                background-color: lightyellow;
+                margin-right: 23rem;
+                margin-top: 5rem;
+                padding:1rem ;
+            }
+            .combobutton{
+                margin: 2rem;
+            }
+            .a2{
+                margin-left: 38rem;
+                position: absolute;
+            }
+            .h2s{
+                margin-top: 5px;
+                font-size: 34px;
+                margin-left: 38%;
+            }
+            .h3heads,.h33heads{
+                font-family: 'Josefin Sans', sans-serif;
+                font-size: 20px;
+            }
+            .paragraphs,.paragraphss{
+                font-family: 'Josefin Sans', sans-serif;
+                line-height: 1.7rem;
+            }
+            #button1{
+                background-color: greenyellow;
+                padding: 10px;
+                border: 1px solid white;
+                border-radius: 10px;
+                color:darkslategrey;
+                margin-top: -10px;
+                font-family: 'Josefin Sans', sans-serif;
+                cursor: pointer;
+            }
+
+            #button1:focus{
+                outline:none;
+            }
+            #button2{
+                cursor: pointer;
+                background-color: red;
+                padding: 8px;
+                border: 1px solid white;
+                border-radius: 6px;
+                color:darkslategrey;
+                width:60px;
+                font-family: 'Josefin Sans', sans-serif;
+                margin-left: 1rem;
+            }
+
+            #button2:focus{
+                outline:none;
+            }
+            #fn10{
+                width: 8rem;
+                height: 3rem;
+            }
+            .allblocks{
+                position: absolute;
+            }
+
+        }
+        @media screen and (max-width:1366px){
+            .nav-bar1{
+                width:1366px;
+                height:5.2rem;
+            }
+            .nav-bar1 h1{
+                margin-top: 20px;
+            }
+            .div1{
+                width:34rem;
+            }
+            #img1 {
+                width:320px;
+                margin-left: 3.7rem;
+                margin-top: 3rem;
+            }
+
+            #img1:hover {
+                transform: scale(1.3);
+                transition: 0.8s;
+            }
+            #displays,#emaildisplays{
+                display: none;
+                z-index: 10;
+                position: absolute;
+                border: 1px solid #705b2e;
+                border-radius: 8px;
+                margin-left: -35rem;
+                background-color: lightyellow;
+                margin-right: 23rem;
+                margin-top: 5rem;
+                padding:1rem ;
+            }
+            .a2{
+                margin-left: 38rem;
+                position: absolute;
+            }
+            .h2s{
+                margin-top: 5px;
+                font-size: 34px;
+                margin-left: 38%;
+            }
+            .h3heads,.h33heads{
+                font-family: 'Josefin Sans', sans-serif;
+                font-size: 20px;
+            }
+            .paragraphs,.paragraphss{
+                font-family: 'Josefin Sans', sans-serif;
+                line-height: 1.7rem;
+            }
+            #button1{
+                background-color: greenyellow;
+                padding: 10px;
+                border: 1px solid white;
+                border-radius: 10px;
+                color:darkslategrey;
+                margin-top: -10px;
+                font-family: 'Josefin Sans', sans-serif;
+                cursor: pointer;
+            }
+
+            #button1:focus{
+                outline:none;
+            }
+            #button2{
+                cursor: pointer;
+                background-color: red;
+                padding: 8px;
+                border: 1px solid white;
+                border-radius: 6px;
+                color:darkslategrey;
+                width:60px;
+                font-family: 'Josefin Sans', sans-serif;
+                margin-left: 1rem;
+            }
+
+            #button2:focus{
+                outline:none;
+            }
+            .buttonsall{
+                margin-left: 2rem;
+            }
+            #fn, #fn1, #fn2, #fn3, #fn4, #fn5, #fn6, #fn7, #fn9, #fn8, #fn9 {
+                margin-left: 2rem;
+            }
+            #fn10{
+                width:8rem;
+                height: 3rem;
+
+            }
+            .combobutton{
+                margin: 1rem;
+                margin-left: 2rem;
+            }
+            .allblocks{
+                position: absolute;
+            }
+
+        }
+        @media screen and (max-width:1024px){
+            .nav-bar1{
+                width:1024px;
+                height:4.5rem;
+            }
+            .nav-bar1 h1{
+                font-size: 26px;
+                margin-left: 20px;
+            }
+
+            .div1{
+                width:23rem;
+                margin: 15px;
+            }
+            .block1{
+                border-color: white;
+            }
+            .a1,.a2{
+                border-color: transparent;
+            }
+            #img1 {
+                width:280px;
+                margin-left: 2.4rem;
+                margin-top: 4rem;
+            }
+
+            #img1:hover {
+                transform: scale(1.3);
+                transition: 0.8s;
+            }
+            .a1{
+                margin-left: 5rem;
+                width:26rem;
+                height: 25rem;
+            }
+            .a2{
+                margin-left: 49%;
+            }
+            .buttonsall{
+                margin-left: 1rem;
+            }
+            .combobutton{
+                margin: 1rem;
+            }
+            .h2s{
+                margin-top: 4rem;
+            }
+            #displays,#emaildisplays{
+                display: none;
+                z-index: 10;
+                position: absolute;
+                border: 1px solid #705b2e;
+                border-radius: 8px;
+                margin-left: -30rem;
+                background-color: lightyellow;
+                margin-right: 18rem;
+                margin-top: 5rem;
+                padding:1rem ;
+            }
+            .allblocks{
+                position: absolute;
+            }
+
+
+
+        }
+        @media screen and (max-width: 768px){
+            .nav-bar1{
+                width:768px;
+                height:4rem;
+            }
+            .div1{
+                width:16rem;
+                height: 9rem;
+            }
+            .nav-bar1 h1{
+                font-size:24px ;
+            }
+            #img1 {
+                width:200px;
+                margin-left: 2.5rem;
+                margin-top: 3rem;
+            }
+
+            #img1:hover {
+                transform: scale(1.3);
+                transition: 0.8s;
+            }
+            .int{
+                margin-left: 2px;
+                width:7.4rem;
+                height: 2.4rem;
+
+            }
+            .imggrids, .imggrids1, .imggrids2, .imggrids3, .imggrids4, .imggrids5, .imggrids6, .imggrids7, .imggrids8, .imggrids9 {
+                width: 40px;
+                height: 40px;
+                border: 1.5px solid grey;
+                margin: 13px;
+                border-radius: 4px;
+            }
+            .block1{
+                margin-left: 2rem;
+            }
+            #imgs{
+                width:30px;
+                height:24px;
+            }
+            .a1{
+                width:17rem;
+                height:20rem;
+                margin-left: 4rem;
+            }
+
+            #displays,#emaildisplays{
+                display: none;
+                z-index: 10;
+                position: absolute;
+                border: 1px solid #705b2e;
+                border-radius: 8px;
+                background-color: lightyellow;
+                margin-right: 12rem;
+                margin-top: 5rem;
+                padding:1rem ;
+
+            }
+            .a2{
+                margin-left: 22rem;
+                position: absolute;
+                font-size: 20px;
+                line-height: 1rem;
+            }
+            .h2s{
+                margin-top: 5px;
+                font-size: 34px;
+                margin-left: 38%;
+            }
+            .h3heads,.h33heads{
+                font-family: 'Josefin Sans', sans-serif;
+                font-size: 20px;
+            }
+            .paragraphs,.paragraphss{
+                font-family: 'Josefin Sans', sans-serif;
+                line-height: 1.7rem;
+            }
+            #button1{
+                background-color: greenyellow;
+                padding: 10px;
+                border: 1px solid white;
+                border-radius: 10px;
+                color:darkslategrey;
+                margin-top: -10px;
+                font-family: 'Josefin Sans', sans-serif;
+                cursor: pointer;
+            }
+
+            #button1:focus{
+                outline:none;
+            }
+            #button2{
+                cursor: pointer;
+                background-color: red;
+                padding: 8px;
+                border: 1px solid white;
+                border-radius: 6px;
+                color:darkslategrey;
+                width:60px;
+                font-family: 'Josefin Sans', sans-serif;
+                margin-left: 1rem;
+            }
+
+            #button2:focus{
+                outline:none;
+            }
+            #fn10{
+                width: 8rem;
+                height: 3rem;
+            }
+            #fn, #fn1, #fn2, #fn3, #fn4, #fn5, #fn6, #fn7, #fn9, #fn8, #fn9 {
+                width: 4rem;
+                margin-left: 1rem;
+                height: 2rem;
+            }
+            .combobutton{
+                margin-left:-1rem;
+            }
+            .h2s{
+                margin-top: 3rem;
+                font-size: 24px;
+                margin-left: 30%;
+            }
+            .lstblock{
+                height: 10rem;
+                margin-top: 14rem;
+            }
+            .allblocks{
+                position: absolute;
+            }
+
+        }
+        @media screen and (max-width: 425px){
+            .imggrids, .imggrids1, .imggrids2, .imggrids3, .imggrids4, .imggrids5, .imggrids6, .imggrids7, .imggrids8, .imggrids9 {
+                width: 44px;
+                height: 44px;
+                border: 1.5px solid grey;
+                margin: 13px;
+                border-radius: 4px;
+
+            }
+            .nav-bar1{
+                width:425px;
+                height:3.8rem;
+            }
+            #img1{
+                margin-left: 2rem;
+                margin-top: 1.5rem;
+            }
+            .allblocks{
+                margin-left: 80%;
+            }
+            .int{
+                margin-left: 52%;
+            }
+            .div1{
+                width:20rem;
+                height: 10rem;
+            }
+            .block1{
+                grid-template-columns: auto;
+                margin-left: 6px;
+            }
+            .a1{
+                width:20rem;
+                height: 18.4rem;
+                margin-left: 1rem;
+            }
+            .a2{
+                margin-left: -2px;
+                line-height: 34px;
+                margin-top: -5rem;
+                line-height: 1rem;
+            }
+            .h2s{
+                margin-top: 40rem;
+            }
+            .sizes{
+                margin-top: 10px;
+                font-size: 10px;
+            }
+            .sp,.rd{
+                margin-top: -10px;
+                font-size: 19px;
+            }
+            .lstblock{
+                margin-top: 46rem;
+                bottom:0;
+            }
+            .h2s{
+                margin-left: 2rem;
+                font-size: 25px;
+                margin-top: 30rem;
+            }
+            .allblocks{
+                position: absolute;
+            }
+            #displays,#emaildisplays{
+                display: none;
+                z-index: 10;
+                position: absolute;
+                border: 1px solid #705b2e;
+                border-radius: 8px;
+                background-color: lightyellow;
+                margin-right: 1rem;
+                margin-left: 2rem;
+                margin-top: -18rem;
+                padding:1rem ;
+                width: 20rem;
+
+            }
+            .combobutton{
+                margin-left: 2rem;
+            }
+        }
+        @media screen and (max-width:375px){
+            .block1{
+                display: grid;
+                grid-template-columns: auto;
+            }
+            .div1{
+                width:18rem;
+                height: 10rem;
+            }
+
+            .nav-bar1{
+                width:375px;
+                height: 4rem;
+            }
+
+            .int{
+                margin-left: 9rem;
+            }
+            .a1{
+                width:18rem;
+            }
+            .h2s{
+                margin-top: 30rem;
+            }
+            .lstblock{
+                margin-top: 48rem;
+            }
+            .nav-bar1 h1{
+                font-size: 25px;
+            }
+            .allblocks{
+                position: absolute;
+            }
+             #displays,#emaildisplays{
+                display: none;
+                z-index: 10;
+                position: absolute;
+                border: 1px solid #705b2e;
+                border-radius: 8px;
+                background-color: lightyellow;
+                margin-right: 4rem;
+                margin-left: 2rem;
+                margin-top: -18rem;
+                padding:1rem ;
+                width: 18rem;
+
+            }
+        }
+        @media screen and (max-width:320px){
+            .int{
+                position: absolute;
+                margin-top: 20rem;
+                margin-left: -5px;
+            }
+            .lstblock{
+                margin-top:64rem;
+            }
+            .nav-bar1{
+                width:320px;
+            }
+            #img1{
+                width:180px;
+            }
+            .nav-bar1 h1{
+                font-size: 24px;
+            }
+            .a2{
+                font-size: 21px;
+                margin-top: -1rem;
+                line-height:1.5rem;
+                margin-left: -5px;
+                z-index: 3;
+            }
+
+            .div1{
+                z-index: 3;
+                width:14rem;
+                height: 12rem;
+            }
+            .h2s{
+                margin-top: 40rem;
+                font-size: 25px;
+                z-index: 3;
+            }
+            .a1{
+                width: 15rem;
+            }
+            .imggrids, .imggrids1, .imggrids2, .imggrids3, .imggrids4, .imggrids5, .imggrids6, .imggrids7, .imggrids8, .imggrids9 {
+                width:36px;
+                height: 36px;
+                margin-left: 10px;
+
+            }
+            .uls li{
+                line-height: 2px;
+                margin-left: -50px;
+
+            }
+            .uls li a{
+                line-height: 2px;
+                font-size: 12px;
+            }
+            .allblocks{
+                position: absolute;
+            }
+             #displays,#emaildisplays{
+                display: none;
+                z-index: 10;
+                position: absolute;
+                border: 1px solid #705b2e;
+                border-radius: 8px;
+                background-color: lightyellow;
+                margin-right: 1rem;
+                margin-left: 2rem;
+                margin-top: -20rem;
+                padding:1rem ;
+                width: 15rem;
+
+
+            }
+            .sizes{
+                margin-left: 2rem;
+            }
+            .rd{
+                font-size:6px;
+            }
+        }
+
+
+
+
+    </style>
+    <script src="https://kit.fontawesome.com/99b73c64c0.js" crossorigin="anonymous"></script>
+    <script>
+        function redirection(){
+            window.location.href = "index"
+        }
+        function fn1(){
+            document.getElementById("img1").src = "{% if objd.saffbool %} {{ objd.saffbool1.url }} {% endif %}"
+        }
+
+        function fn2(){
+            document.getElementById("img1").src = "{% if objd.redbool %} {{ objd.redbool1.url }}{% endif %}"
+        }
+        function fn3(){
+            document.getElementById("img1").src = "{% if objd.bluebool %} {{ objd.bluebool1.url }} {% endif %}"
+        }
+        function fn4(){
+            document.getElementById("img1").src = "{% if objd.yellowbool %} {{ objd.yellowbool1.url }} {% endif %}"
+        }
+        function fn5(){
+            document.getElementById("img1").src ="{% if objd.pinkbool %} {{ objd.pinkbool1.url }} {% endif %}"
+        }
+        function fn6(){
+            document.getElementById("img1").src = "{% if objd.purplebool %} {{ objd.purplebool1.url }} {% endif %}"
+        }
+        function fn7(){
+            document.getElementById("img1").src = "{% if objd.brownbool %} {{ objd.brownbool1.url }} {% endif %}"
+        }
+        function fn8(){
+            document.getElementById("img1").src = "{% if objd.greenbool %} {{ objd.greenbool1.url }} {% endif %}"
+        }
+        function fn9(){
+            document.getElementById("img1").src = "{% if objd.mintbool %} {{ objd.mintbool1.url }} {% endif %}"
+        }
+        function fn10() {
+            document.getElementById("img1").src = "{% if objd.combobool %} {{ objd.combobool1.url }} {% endif %}"
+        }
+        //------------------------------------------------------------------------------------------------------------------------
+        function imgfn(){
+            document.getElementById("img1").src = "{% if objd.saffbool %}{{ objd.saffbool2.url }} {% endif %}"
+        }
+        function imgfn1(){
+            document.getElementById("img1").src = "{% if objd.redbool %} {{ objd.redbool2.url }}{% endif %}"
+        }
+        function imgfn2(){
+            document.getElementById("img1").src ="{% if objd.bluebool %} {{ objd.bluebool2.url }} {% endif %}"
+        }
+        function imgfn3(){
+            document.getElementById("img1").src =  "{% if objd.yellowbool %} {{ objd.yellowbool2.url }} {% endif %}"
+        }
+        function imgfn4(){
+            document.getElementById("img1").src = "{% if objd.pinkbool %} {{ objd.pinkbool2.url }} {% endif %}"
+        }
+        function imgfn5(){
+            document.getElementById("img1").src = "{% if objd.purplebool %} {{ objd.purplebool2.url }} {% endif %}"
+        }
+        function imgfn6(){
+            document.getElementById("img1").src = "{% if objd.brownbool %} {{ objd.brownbool2.url }} {% endif %}"
+        }
+        function imgfn7(){
+            document.getElementById("img1").src = "{% if objd.greenbool %} {{ objd.greenbool2.url }} {% endif %}"
+        }
+        function imgfn8(){
+            document.getElementById("img1").src = "{% if objd.mintbool %} {{ objd.mintbool2.url }} {% endif %}"
+        }
+        function imgfn9(){
+            document.getElementById("img1").src = "{% if objd.combobool %} {{ objd.combobool1.url }} {% endif %}"
+        }
+
+        function fnbeforeint(){
+            document.getElementById("displays").style.display = "block";
+        }
+        function fncurrent(){
+            document.getElementById("displays").style.display = "none";
+        }
+        function fncurrent1(){
+            document.getElementById("emaildisplays").style.display = "none";
+        }
+        function fnmails(){
+            document.getElementById("emaildisplays").style.display = "block";
+        }
+
+
+
+    </script>
+</head>
+<body>
+    <nav role="navigation">
+        <div id="menuToggle">
+          <!--
+          A fake / hidden checkbox is used as click reciever,
+          so you can use the :checked selector on it.
+          -->
+          <input type="checkbox" />
+          
+          <!--
+          Some spans to act as a hamburger.
+          
+          They are acting like a real hamburger,
+          not that McDonalds stuff.
+          -->
+          <span></span>
+          <span></span>
+          <span></span>
+          
+          <!--
+          Too bad the menu has to be inside of the button
+          but hey, it's pure CSS magic.
+          -->
+          <ul id="menu">
+            <a href="{% url 'index' %}" id = "actives"><li>Home</li></a>
+            <a href="{% url 'towel' %}" ><li>Towels</li></a>
+            <a href="{% url 'naps' %}" ><li>Napkins</li></a>
+            <a href="#" ><li>Chaddars</li></a>
+            <a href="{% url 'abt' %}" ><li>About Us</li></a>
+            <a href="{% url 'toc' %}" ><li>T&C</li></a>
+          </ul>
+        </div>
+      </nav>
+    <div class = "nav-bar">
+        <a href = "{% url 'redirect' %}">
+            <h1> Towels Online</h1>
+        </a>
+        <div class = "searchbox">
+            <form action = "{% url 'searchbar' %}"  method = "GET">
+                <input type = "text" name = "search" onchange = "this.form.submit()" placeholder = "Search" id = "search_bar"/>
+                <input type = "submit" id = "submit"/>
+            </form>
+            </div>
+        <div class="alluls">
+            <ul>
+                <li><a href = "{% url 'index' %}">Home</a></li>
+                <li><a href = "{% url 'towel' %}"  id = "actives">Towels</a></li>
+                <li><a href = "{% url 'naps' %}">Napkins</a></li>
+                <li><a href = "">Chaddars</a></li>
+                <li><a href = "{% url 'abt' %}">About Us</a></li>
+                <li><a href = "{% url 'toc' %}">T&C</a></li>
+            </ul>
+        </div>
+        <ul class = "lists1">
+            {% if user.is_authenticated %}
+    
+                <li> <a href = "#" class = "current" ><img src = "{% static 'approved.svg' %}" width = "30" height = "30"/>{{ user.username }} </a> </li>
+                <li> <a href = "{% url 'logout' %}" class = "current" ><img src = "{% static 'logout.svg' %}" width = "30" height = "30"/>Logout </a> </li>
+            {% else %}
+                <li> <a href = "{% url 'register' %}" id = "su"><img src = "{% static 'add-user.svg' %}" width = "30" height = "30"/>Sign Up </a> </li>
+                <li> <a href = "{% url 'login' %}" id = "si"><img src = "{% static 'user.svg' %}" width = "30" height = "30"/>Sign In </a> </li>
+            {% endif %}
+    
+        </ul>
+    
+    </div>
+<div class = "allblocks" data-aos="fade-up"
+data-aos-duration="1000">
+    {% if objd.saffbool %} <div class = "imggrids" onmouseover = "imgfn()" ><img src ="{{ objd.saffbool2.url }}" id = "imgs" ></div> {% endif %}
+    {% if objd.redbool %}<div class = "imggrids1" onmouseover = "imgfn1()"> <img src ="{{ objd.redbool2.url }}"id = "imgs" ></div> {% endif %}
+    {% if objd.bluebool %} <div class = "imggrids2" onmouseover = "imgfn2()"> <img src ="{{ objd.bluebool2.url }}" id = "imgs" ></div> {% endif %}
+    {% if objd.yellowbool %} <div class = "imggrids3" onmouseover = "imgfn3()"> <img src ="{{ objd.yellowbool2.url }}" id = "imgs"></div> {% endif %}
+    {% if objd.pinkbool %} <div class = "imggrids4" onmouseover = "imgfn4()"><img src = "{{ objd.pinkbool2.url }}" id = "imgs"></div> {% endif %}
+    {% if objd.purplebool %} <div class = "imggrids5" onmouseover = "imgfn5()"><img src = "{{ objd.purplebool2.url }}" id = "imgs" ></div> {% endif %}
+    {% if objd.brownbool %}<div class = "imggrids6" onmouseover = "imgfn6()"> <img src ="{{ objd.brownbool2.url }}"id = "imgs" ></div> {% endif %}
+    {% if objd.greenbool  %} <div class = "imggrids7" onmouseover = "imgfn7()"> <img src ="{{ objd.greenbool2.url }}" id = "imgs"></div> {% endif %}
+    {% if objd.mintbool %} <div class = "imggrids8" onmouseover = "imgfn8()"> <img src ="{{ objd.mintbool2.url }}" id = "imgs"></div> {% endif %}
+    {% if objd.combobool %}<div class = "imggrids9"onmouseover = "imgfn9()"><img src = "{{ objd.combobool1.url }}" id = "imgs"></div> {% endif %}
+
+
+</div>
+<div class = "all">
+
+
+    <div class = "a1" data-aos="fade-right">
+        {% if user.is_authenticated %}
+            <button class = "int" onclick = "return fnmails()" > Enquiry  <i class="fa fa-phone" aria-hidden="true"></i> </button>
+        {% else %}
+            <button class = "int"  onclick = "return fnbeforeint()"> Enquiry <i class="fa fa-phone" aria-hidden="true"></i></button>
+
+        {% endif %}
+
+        {% if objd.Image %}<img src = "{{ objd.Image.url }}" id = "img1">
+        {% endif %}
+    </div>
+    <center>
+
+        <div id = "displays">
+            <h3 class = "h3heads" > Important Note</h3><br>
+            <p class = "paragraphs">You need to create an account to tell us which product you are interested in. Click Go Ahead to continue further.<br><br>
+                <a href = "{% url 'register' %}"><button id = "button1">Go Ahead</button></a>
+                <button id = "button2" onclick = "fncurrent()">Close</button></p>
+        </div>
+
+        <div id = "emaildisplays">
+            <h3 class = "h33heads"> Important Note</h3><br>
+            <p class = "paragraphss">By clicking on continue we will be notified that you are interested in particular product. Continue!<br><br>
+                <a href = "{% url 'mailfortows' %}"><button id = "button1">Continue</button></a>
+                <button id = "button2" onclick = "fncurrent1()">Close</button></p>
+        </div>
+    </center>
+
+    <div class = "a2" data-aos="fade-left">
+
+
+
+
+
+        {{ objd.Name }}
+
+
+        <br> <br>
+        Size -
+        <br> {% if objd.Size2448 %}
+        <div class = "sizes" ><span class = "sp">  24-48 Available</span>
+        <span class = "rd"> {% else %} 24-48 - No Size Available {% endif %} </span> <br>
+
+        {% if objd.Size2754 %} <span class = "sp">27-54 Available</span>
+        {% else %} <span class = "rd"> 27-54 - No Size Available {% endif %} <br></span>
+        {% if objd.Size3060 %}
+            <span class = "sp">30-60 Available</span>
+        {% else %}
+            <span class = "rd">30-60 - No Size Available {% endif %}</span> <br>
+        <br></div>
+
+
+        Material - 	{{ objd.Material }}			<br><br>
+        <div>
+            {% if objd.Stock %}    <span class = "sp"> In Stock {% else %}</span>
+                <span class = "rd">Out of Stock  </span>
+            {% endif %}
+        </div><br>
+        Colors Available -<br>
+        <div class = "buttonsall">
+        {% if objd.saffbool %} <button onmouseover = "fn1()" id = "fn" class = "active"> Saffron </button> {% endif %}
+        {% if objd.redbool  %} <button onmouseover = "fn2()" id = "fn1" class = "active"> Red </button>  {% endif %}
+        {% if objd.bluebool %} <button onmouseover = "fn3()" id = "fn2" class = "active"> Blue </button> {% endif %}
+        {% if objd.yellowbool %} <button onmouseover = "fn4()" id = "fn3" class = "active"> Yellow </button> {% endif %}
+        {% if objd.pinkbool %} <button onmouseover = "fn5()" id = "fn4" class = "active"> Pink </button> {% endif %}
+        {% if objd.purplebool %} <button onmouseover = "fn6()" id = "fn5" class = "active"> Purple </button> {% endif %}
+        {% if objd.brownbool %} <button onmouseover = "fn7()" id = "fn6" class = "active"> Brown</button>    {% endif %}
+        {% if objd.greenbool %} <button onmouseover = "fn8()" id = "fn7" class = "active"> Green </button><br>{% endif %}
+        {% if objd.mintbool %} <button onmouseover = "fn9()" id = "fn9" class = "active"> Mint </button><br>
+
+        {% endif %}<br>
+        </div><div class = "combobutton">
+        {% if objd.combobool %} <button onmouseover = "fn10()" id = "fn10"> Combo Available  </button>
+        {% else %} No Combo Available
+        {% endif %}<br><br>
+    </div>
+    </div>
+<center>
+    <div class = "h2s"> Specifications </div>
+</center>
+</div>
+<div class = "block1">
+    {% if 'tickforembroideryboolt' %}
+        <div class = "div1"  data-aos="fade-up">
+            <h3 class = "h3">
+                <center>
+                    Style<br/><img src = "{% static 'pattern-design.svg' %}" width = "50" height = "50"/>
+                    <p id = "p">
+                        These Towel Product Varieties have <span class = "span">Embroidery Design</span> as border which makes its finishing look Perfect!
+                    </p>
+                </center>
+            </h3>
+
+        </div>
+    {% else %}
+        <div class = "div1"  data-aos="fade-up">
+            <h3 class = "h3">
+                <center>
+                    Style<br>
+                    <p id = "p"><img src = "{% static 'towels.svg' %}" width = "50" height = "50"/>
+                        These Towels has a <span class = "span">Plain design</span> with no embroidery which suites the Product Design.
+                    </p>
+                </center>
+            </h3>
+
+        </div>
+    {% endif %}
+    {% if 'tickforsmoothboolt' %}
+        <div class = "div1"  data-aos="fade-up">
+
+            <h3 class = "h3">
+                <center>
+                    Comfort<br/><img src = "{% static 'feather.svg' %}" width = "50" height = "50"/>
+                    <p id = "p">
+                        Small Threads like designs make this product much <span class = "span">Smooth and comfort</span> to use on daily basis.
+                    </p>
+                </center>
+            </h3>
+
+
+        </div>
+    {% else %}
+
+
+
+        <div class = "div1"  data-aos="fade-up">
+
+            <h3 class = "h3">
+                <center>
+                    Design<br>
+                    <p id = "p">
+                        The design comes out like the small <span class ="span"> Cotton threads wrapped into themselves.</span>
+                    </p>
+                </center>
+            </h3>
+
+
+        </div>
+    {% endif %}
+
+    {% if 'tickforbathboolt' %}
+        <div class = "div1"  data-aos="fade-up">
+
+            <h3 class = "h3">
+                <center>
+                    Type<br><img src = "{% static 'towel.svg' %}" width = "50" height = "50"/>
+                    <p id = "p">
+                        This towel is the most perfect to use for<span class = "span"> Bath purpose.</span>
+                    </p>
+                </center>
+            </h3>
+
+
+        </div>
+    {% else %}
+        <div class = "div1">
+
+            <h3 class = "h3"  data-aos="fade-up">
+                <center><br>
+                    Type<img src = "{% static 'hand-washing.svg' %}" width = "50" height = "50"/>
+                    <p id = "p">
+                        This towel is the most perfect to use for Hand Wash purpose.
+                    </p>
+                </center>
+            </h3>
+
+
+        </div>
+    {% endif %}
+
+    {% if 'tickforfilamentboolt' %}
+        <div class = "div1"  data-aos="fade-up">
+
+            <h3 class = "h3" >
+                <center>
+                    Material <br> <img src = "{% static 'filament.svg' %}" width = "50" height = "50"/>
+                    <br>
+                   
+                    <p id = "p">
+                        Towel is made up of <span class = "span">Filament material.</span>
+                    </p>
+                </center>
+            </h3>
+
+
+        </div>
+    {% else %}
+        <div class = "div1"  data-aos="fade-up">
+
+            <h3 class = "h3">
+                <center>
+                    Material<br><img src = "{% static 'cotton.svg' %}" width = "50" height = "50"/>
+                   
+                    <div id = "p">
+                        Towel is made up of <span class = "span">Cotton material.</span>
+                    </div>
+                </center>
+            </h3>
+
+
+        </div>
+    {% endif %}
+</div>
+
+<div class = "lstblock">
+    <div class = "uli">
+        <ul class = "uls"><br><br><br>
+            <li > <a href = "{% url 'abt' %}">About Us</a> </li><br>
+            <li > <a href = "{% url 'help' %}">Help with your issues!</a> </li><br/>
+            <li > <a href = "{% url 'toc' %}">Terms and Conditions</a> </li><br>
+
+
+        </ul>
+    </div>
+</div>
+
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+
+
+
+</div>
+</body>
+</html>
