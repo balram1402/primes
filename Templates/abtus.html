@@ -155,15 +155,15 @@
         <a href="{% url 'index' %}" id = "actives"><li>Home</li></a>
         <a href="{% url 'towel' %}" ><li>Towels</li></a>
         <a href="{% url 'naps' %}" ><li>Napkins</li></a>
-        <a href="#" ><li>Chaddars</li></a>
-        <a href="{% url 'abt' %}" ><li>About Us</li></a>
+        <a href="{% url 'chaddars' %}" ><li>Chaddars</li></a>
+        <a href="#" ><li>About Us</li></a>
         <a href="{% url 'toc' %}" ><li>T&C</li></a>
       </ul>
     </div>
   </nav>
        <div class = "nav-bar">
            <a href = "{% url 'redirect' %}">
-               <h1> Towels Online</h1>
+               <h1> Textile Works</h1>
            </a>
            <div class = "searchbox">
                <form action = "{% url 'searchbar' %}"  method = "GET">
@@ -176,7 +176,7 @@
                    <li><a href = "{% url 'index' %}">Home</a></li>
                    <li><a href = "{% url 'towel' %}">Towels</a></li>
                    <li><a href = "{% url 'naps' %}">Napkins</a></li>
-                   <li><a href = "">Chaddars</a></li>
+                   <li><a href = "{% url 'chaddars' %}">Chaddars</a></li>
                    <li><a href = "#" id = "actives">About Us</a></li>
                    <li><a href = "{% url 'toc' %}">T&C</a></li>
                </ul>

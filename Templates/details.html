@@ -1048,7 +1048,7 @@
             <a href="{% url 'index' %}" id = "actives"><li>Home</li></a>
             <a href="{% url 'towel' %}" ><li>Towels</li></a>
             <a href="{% url 'naps' %}" ><li>Napkins</li></a>
-            <a href="#" ><li>Chaddars</li></a>
+            <a href="{% url 'chaddars' %}" ><li>Chaddars</li></a>
             <a href="{% url 'abt' %}" ><li>About Us</li></a>
             <a href="{% url 'toc' %}" ><li>T&C</li></a>
           </ul>
@@ -1056,7 +1056,7 @@
       </nav>
     <div class = "nav-bar">
         <a href = "{% url 'redirect' %}">
-            <h1> Towels Online</h1>
+            <h1> Textile Works</h1>
         </a>
         <div class = "searchbox">
             <form action = "{% url 'searchbar' %}"  method = "GET">

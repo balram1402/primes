@@ -72,3 +72,8 @@ def searchbar(request):
 
         
 
+
+
+
+def chaddars(request):
+    return render(request,"chaddars.html")
