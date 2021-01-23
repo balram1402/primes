@@ -415,13 +415,13 @@
     
 
 <center>
-    <div class = "reg" id = "reg" data-aos="fade-up"><center>Sign Up</center></div>
+    <div class = "reg" id = "reg" data-aos="fade-up"><center>SignUp</center></div>
 
 </center>
 <div class = "whole" data-aos="zoom-out">
 
     <center>
-
+      
         <form action = "{% url 'register' %}" method = "post" name = "form1"  onsubmit="return validateForm()">
             {% csrf_token %}
             <div class = "headings"  id = "headings"><center>
@@ -432,8 +432,9 @@
                 <input type = "password" id = "inp" placeholder = "Confirm Password" name = "password2"><br>
             </center>
             </div>
-            <input type = "submit" id = "sub">
+           <input type = "submit" id = "sub" >
         </form>
+     
 
 
         <div class = "message" id = "message" onload="vannish()">

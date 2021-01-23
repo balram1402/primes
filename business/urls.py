@@ -13,7 +13,8 @@ urlpatterns = [
     path('help/',views.help,name='help'),
     path('toc/',views.toc,name='toc'),
     path('searchbar/',views.searchbar,name='searchbar'),
-    path('chaddars/',views.chaddars,name='chaddars')
+    path('chaddars/',views.chaddars,name='chaddars'),
+
 
 ]
 

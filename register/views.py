@@ -4,6 +4,10 @@ from django.contrib import messages
 from business.views import index
 from django.core.mail import send_mail
 from django.template.loader import render_to_string
+from django.views import View
+import math, random
+from django.http import HttpResponse
+
 
 def register(request):
 
@@ -70,7 +74,7 @@ def register(request):
     else:
         return render(request, "register.html")
 
-
+        
 def login(request):
     if request.method == 'POST':
         username = request.POST['username']
